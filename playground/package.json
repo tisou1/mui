@@ -1,0 +1,17 @@
+{
+  "name": "playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.3.1",
+    "mui": "workspace:mui@*",
+    "vite": "^4.3.2"
+  }
+}
