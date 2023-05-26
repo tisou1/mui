@@ -12,11 +12,11 @@ export default defineConfig({
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/index.js',
+      file: 'dist/cjs/index.js',
       format: 'cjs',
     },
     {
-      file: 'es/index.js',
+      file: 'dist/es/index.js',
       format: 'es',
     }
   ],
@@ -35,14 +35,14 @@ export default defineConfig({
       typescript({
         tsconfig: 'tsconfig.json', // 指定TypeScript配置文件的路径
         declaration: true,
-        outDir: 'dist', // 指定类
+        outDir: 'types', // 指定类
        }),
        // css
        postcss({
         extract: true, // 设置为true以将CSS提取为单独的文件
        }),
        del({
-        targets: ['dist/*', 'es/*']
+        targets: ['dist/*']
        })
   ],
   external: [

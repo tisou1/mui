@@ -1,10 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-// import {Test, Pagitation} from 'mui'
-// import 'mui/src/index.css'
-import {Pagitation} from './es'
+import {Pagitation} from 'mui'
+import 'mui/dist/es/index.css'
 
 
 function App() {
@@ -13,7 +10,8 @@ function App() {
   return (
     <section>
        <Pagitation 
-        totalCount={100}
+        totalCount={200}
+        onChange={(...arg) => console.log(arg)}
       />
     </section>
   )
